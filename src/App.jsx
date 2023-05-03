@@ -1,11 +1,11 @@
-import './App.css';
-import { useSelector, useDispatch } from 'react-redux';
-import { increment } from './actions/index.js';
-import { decrement } from './actions/index.js';
+import './App.css'
+import { useSelector, useDispatch } from 'react-redux'
+import { increment } from './actions/index.js'
+import { decrement } from './actions/index.js'
 const App = () => {
-  const counter = useSelector((state) => state.counter);
-  const isLogged = useSelector((state) => state.isLogged);
-  const dispatch = useDispatch();
+  const counter = useSelector((state) => state.counter)
+  const isLogged = useSelector((state) => state.isLogged)
+  const dispatch = useDispatch()
 
   return (
     <div className="container">
@@ -15,7 +15,7 @@ const App = () => {
         <a
           title="Decrement"
           className="quantity__minus"
-          onClick={() => dispatch(decrement())}
+          onClick={() => dispatch(decrement(2))}
         >
           <span>-</span>
         </a>
@@ -28,12 +28,12 @@ const App = () => {
         <a
           className="quantity__plus"
           title="Increment"
-          onClick={() => dispatch(increment(5))}
+          onClick={() => dispatch(increment(2))}
         >
           <span>+</span>
         </a>
       </div>
     </div>
-  );
-};
-export default App;
+  )
+}
+export default App

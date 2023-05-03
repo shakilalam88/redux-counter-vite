@@ -2,11 +2,12 @@ const increment = (number) => {
   return {
     type: 'INCREMENT',
     payload: number,
-  };
-};
-const decrement = () => {
+  }
+}
+const decrement = (number) => {
   return {
     type: 'DECREMENT',
-  };
-};
-export { increment, decrement };
+    payload: number,
+  }
+}
+export { increment, decrement }
